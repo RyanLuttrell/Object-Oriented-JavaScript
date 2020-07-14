@@ -9,4 +9,3 @@ const ernie = {
 
 console.log(ernie.age);
 console.log(ernie.breed);
-ernie.bark();

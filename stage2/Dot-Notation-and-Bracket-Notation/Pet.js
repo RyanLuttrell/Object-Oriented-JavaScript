@@ -17,13 +17,23 @@ class Pet {
         }
     }
 
+    get owner() {
+        return this._owner;
+    }
+
+    set owner(owner) {
+        this._owner = owner;
+        console.log(`setter called: ${owner}`);
+    }
+
     speak() {
         console.log(this.sound);
     }
+}
 
+class Owner {
+        
 }
 
 const ernie = new Pet('dog', 1, 'pug', 'yip yip');
 const vera = new Pet('dog', 8, 'Border Collie', 'woof woof');
-
-console.log(ernie);

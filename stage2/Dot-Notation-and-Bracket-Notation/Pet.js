@@ -32,8 +32,26 @@ class Pet {
 }
 
 class Owner {
-        
+    constructor(name, address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    set phone(phone) {
+        const phoneNormalized = phone.replace(/[^0-9]/g, '');
+        this._phone = phoneNormalized;
+    }
+
+    get phone() {
+        return this._phone
+    }
 }
 
 const ernie = new Pet('dog', 1, 'pug', 'yip yip');
 const vera = new Pet('dog', 8, 'Border Collie', 'woof woof');
+
+ernie.owner = new Owner('Ryan', '11811 Lake Fraser Drive SE');
+ernie.owner.phone = '(403) 899-7926';
+
+console.log(ernie.owner.name);
+console.log(ernie.owner.phone);

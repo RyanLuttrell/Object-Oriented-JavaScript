@@ -18,9 +18,12 @@
     const patron = new Patron('Ryan', 'ryan.m.luttrell@gmail.com');
 
     library.addBook(book);
-    library.addPatron(patron);
+    library.addPatron(patron)
 
-    console.log(library);
+    patron.checkOut(book);
+    library.chargeFines();
+
+    console.log(patron);
     
     
     

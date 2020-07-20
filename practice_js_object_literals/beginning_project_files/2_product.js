@@ -38,3 +38,16 @@ In this example, "chair" is the name of the product.
 
 
 // 6. Run your code by typing node 2_product.js in the console below
+
+const product = {
+    name: 'Skittles',
+    inventory: 200,
+    unit_price: 1.99
+}
+
+function addInventory(item, number) {
+    item.inventory += number;
+    console.log(`${number} Skittles added to inventory`)
+}
+
+addInventory(product, 5);

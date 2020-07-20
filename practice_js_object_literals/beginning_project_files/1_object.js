@@ -20,3 +20,13 @@ publish_year: 1997
 */
 
 // 6. Run your code by typing node 1_object.js in the console below
+
+const book = {
+    title: "Harry Potter and the Chamber of Secrets",
+    author: 'J.K. Rowling',
+    publish_year: 1998
+}
+
+for (const property in book) {
+    console.log(`${property}: ${book[property]}`);
+}
